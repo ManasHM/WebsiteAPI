@@ -30,6 +30,4 @@ public class CuriosityWebsiteTest {
     public static void cleanup(){
         curiosityWebsite.cleanupSession();
     }
-
-
 }

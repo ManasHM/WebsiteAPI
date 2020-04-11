@@ -6,6 +6,7 @@ public class GlobalData {
     public static final String TYPE_CLASS = "CLASS";
     public static final String TYPE_LINKTEXT = "LINKTEXT";
     public static final String TYPE_PARTIALLINKTEXT = "PARTIAL_LINKTEXT";
+    public static final String TYPE_XPATH = "XPATH";
 
     public static final String NAVTYPE_BACK = "BACK";
     public static final String NAVTYPE_FORWARD = "FORWARD";

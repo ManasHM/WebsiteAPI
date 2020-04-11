@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Website {
     WebDriver driver;
@@ -63,8 +65,10 @@ public class Website {
         }
         return false;
     }
-
-    private WebElement findElement(String type, String attribute) throws IllegalStateException {
+    public static void printOnScreen(String text){
+        System.out.println(text);
+    }
+    public WebElement findElement(String type, String attribute) throws IllegalStateException {
         // Go to home Page first
         // driver.get(GlobalData.getHomeUrl());
         WebElement link;
@@ -87,6 +91,10 @@ public class Website {
             }
             case GlobalData.TYPE_PARTIALLINKTEXT:{
                 link = driver.findElement(By.partialLinkText(attribute));
+                break;
+            }
+            case GlobalData.TYPE_XPATH:{
+                link = driver.findElement(By.xpath(attribute));
                 break;
             }
             default:
@@ -112,6 +120,15 @@ public class Website {
         WebElement field = findElement(type, attribute);
         field.sendKeys(value);
         return true;
+    }
+
+    public void explicitWait(String type, String attribute, int seconds){
+        WebDriverWait myWait = new WebDriverWait(driver,seconds);
+        myWait.until(ExpectedConditions.visibilityOf(findElement(type,attribute)));
+    }
+    public void waitForRedirect(String url, int seconds){
+        WebDriverWait myWait = new WebDriverWait(driver,seconds);
+        myWait.until(ExpectedConditions.urlContains(url));
     }
 
     public void navigate(String navType){
