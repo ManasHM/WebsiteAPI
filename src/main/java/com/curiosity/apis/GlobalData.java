@@ -12,6 +12,9 @@ public class GlobalData {
     public static final String NAVTYPE_FORWARD = "FORWARD";
     public static final String NAVTYPE_REFRESH = "REFRESH";
 
+    public static final String VISIBLE = "Visible";
+    public static final String CLICKABLE = "Clickable";
+    public static final String REDIRECT = "Redirect";
 
     public static String getWDLocation() {
         return "C:\\apps\\chromedriver.exe";
