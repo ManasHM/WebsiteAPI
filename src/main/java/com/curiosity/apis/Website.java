@@ -6,9 +6,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
 public class Website {
@@ -25,18 +28,29 @@ public class Website {
         String browserName = GlobalData.getBrowserName();
         if ("Chrome".equals(browserName)) {
             System.setProperty("webdriver.chrome.driver", GlobalData.getWDLocation());
+           // DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+         //   capabilities.setCapability(CapabilityType.PAGE_LOAD_STRATEGY, "none");
             driver = new ChromeDriver();
         } else if ("Firefox".equals(browserName)) {
             System.setProperty("webdriver.gecko.driver", GlobalData.getWDLocation());
             driver = new FirefoxDriver();
         }
         if (driver != null) {
-            driver.manage().timeouts().pageLoadTimeout(20,TimeUnit.SECONDS);
-            driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+            driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+            driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
             driver.manage().window().maximize();
             return driver;
         }
         throw new IllegalStateException("Unexpected value: " + browserName);
+    }
+
+    public void switchTab(boolean closePrevTab) {
+        ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
+        if (closePrevTab) {
+            driver.switchTo().window(tabs2.get(0));
+            driver.close();
+        }
+        driver.switchTo().window(tabs2.get(1));
     }
 
     public void cleanupSession() {
@@ -126,9 +140,9 @@ public class Website {
         try {
             WebElement button = findElement(type, attribute);
             button.click();
-        }catch (Exception e){
+        } catch (Exception e) {
             WebElement button = findElement(type, attribute);
-            JavascriptExecutor executor = (JavascriptExecutor)driver;
+            JavascriptExecutor executor = (JavascriptExecutor) driver;
             executor.executeScript("arguments[0].click();", button);
         }
 
@@ -140,6 +154,15 @@ public class Website {
         field.sendKeys(value);
         return true;
     }
+
+    public void waitFor(long millis){
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
 
     public void explicitWait(String type, String attribute, String condition, int seconds) {
         WebDriverWait myWait = new WebDriverWait(driver, seconds);
@@ -188,12 +211,13 @@ public class Website {
         buttonClick(GlobalData.TYPE_ID, submitButtonid);
         return readCurrentUrl();
     }
+
     public String signup(String url,
-                        String useridFieldid,
-                        String passwordFieldid,
-                        String submitButtonid,
-                        String userid,
-                        String password
+                         String useridFieldid,
+                         String passwordFieldid,
+                         String submitButtonid,
+                         String userid,
+                         String password
     ) {
         loadUrl(url);
         setFieldValue(GlobalData.TYPE_ID, useridFieldid, userid);

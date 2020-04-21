@@ -20,6 +20,7 @@ public class TestKakaoDummyFull {
         String url = kakaoDummyWebsite.signup(KakaoData.channelUrl, KakaoData.useridFieldid,
                 KakaoData.passwordFieldid, KakaoData.submitButtonid, KakaoData.userid,
                 KakaoData.password);
+        kakaoDummyWebsite.waitFor(3000);
         System.out.println("Url after login attempt: " + kakaoDummyWebsite.readCurrentUrl());
         System.out.println("Title after the login attempt: " + kakaoDummyWebsite.readTitle());
 
@@ -33,6 +34,7 @@ public class TestKakaoDummyFull {
         String url = kakaoDummyWebsite.login(KakaoData.channelUrl, KakaoData.useridFieldid,
                 KakaoData.passwordFieldid, KakaoData.submitButtonid, KakaoData.userid,
                 KakaoData.password);
+        kakaoDummyWebsite.waitFor(3000);
         System.out.println("Url after login attempt: " + kakaoDummyWebsite.readCurrentUrl());
         System.out.println("Title after the login attempt: " + kakaoDummyWebsite.readTitle());
 

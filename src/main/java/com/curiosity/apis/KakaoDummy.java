@@ -41,11 +41,11 @@ public class KakaoDummy extends Website {
         waitForRedirect("kakao", 10);
 
         //close the old tab and switch to new tab
-        ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
-        driver.switchTo().window(tabs2.get(0));
-        driver.close();
-        driver.switchTo().window(tabs2.get(1));
-
+//        ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
+//        driver.switchTo().window(tabs2.get(0));
+//        driver.close();
+//        driver.switchTo().window(tabs2.get(1));
+        switchTab(false);
 
         //  explicitWait(GlobalData.TYPE_ID, useridFieldid, 10);
         setFieldValue(GlobalData.TYPE_ID, useridFieldid, userid);
@@ -72,11 +72,7 @@ public class KakaoDummy extends Website {
 
         waitForRedirect("kakao", 10);
 
-        //close the old tab and switch to new tab
-        ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
-        driver.switchTo().window(tabs2.get(0));
-        driver.close();
-        driver.switchTo().window(tabs2.get(1));
+        switchTab(true);
 
 
         //  explicitWait(GlobalData.TYPE_ID, useridFieldid, 10);

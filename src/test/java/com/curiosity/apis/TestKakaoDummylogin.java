@@ -5,7 +5,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class TestKakaoDummy {
+public class TestKakaoDummylogin {
 
     static KakaoDummy kakaoDummyWebsite;
 
@@ -22,12 +22,13 @@ public class TestKakaoDummy {
         String url = kakaoDummyWebsite.login(KakaoData.channelUrl, KakaoData.useridFieldid,
                 KakaoData.passwordFieldid, KakaoData.submitButtonid, KakaoData.userid,
                 KakaoData.password);
+        kakaoDummyWebsite.waitFor(3000);
         System.out.println("Url after login attempt: " + kakaoDummyWebsite.readCurrentUrl());
         System.out.println("Title after the login attempt: " + kakaoDummyWebsite.readTitle());
 
     }
         @AfterClass
     public static void cleanup(){
-      //  kakaoDummyWebsite.cleanupSession();
+        kakaoDummyWebsite.cleanupSession();
     }
 }
