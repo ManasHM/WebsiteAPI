@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="4" failures="2" name="TestSuite" time="37.867" errors="0" skipped="0">
+  <properties>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="java.vm.version" value="14+36"/>
+    <property name="sun.boot.library.path" value="C:\apps\zulujdk\zulu14.27.1-ca-jdk14-win_x64\bin"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\tempmasao\IdeaProjects\WebsiteAPI"/>
+    <property name="java.vm.vendor" value="Azul Systems, Inc."/>
+    <property name="java.vendor.url" value="http://www.azulsystems.com/"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="path.separator" value=";"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="GB"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="C:\Users\tempmasao\IdeaProjects\WebsiteAPI"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="java.runtime.version" value="14+36"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\TEMPMA~1\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="maven.ext.class.path" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2019.3.4\plugins\maven\lib\maven-event-listener.jar"/>
+    <property name="classworlds.conf" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2019.3.4\plugins\maven\lib\maven3\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\apps\zulujdk\zulu14.27.1-ca-jdk14-win_x64\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Sennheiser\SoftphoneSDK\;C:\Program Files\1E\NomadBranch\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\apps\maven\bin;C:\Program Files\Git\cmd;C:\Users\tempmasao\AppData\Local\Google\Chrome\Application\;C:\Users\tempmasao\AppData\Local\Microsoft\WindowsApps;C:\Users\tempmasao\AppData\Local\GitHubDesktop\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2019.3.4\bin;;."/>
+    <property name="maven.conf" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2019.3.4\plugins\maven\lib\maven3/conf"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="java.class.version" value="58.0"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="idea.version2019.3.4" value="true"/>
+    <property name="os.version" value="10.0"/>
+    <property name="user.home" value="C:\Users\tempmasao"/>
+    <property name="user.timezone" value="Europe/Stockholm"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.specification.version" value="14"/>
+    <property name="user.name" value="TEMPMASAO"/>
+    <property name="java.class.path" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2019.3.4\plugins\maven\lib\maven3\boot\plexus-classworlds-2.6.0.jar"/>
+    <property name="java.vm.specification.version" value="14"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version2019.3.4 test"/>
+    <property name="java.home" value="C:\apps\zulujdk\zulu14.27.1-ca-jdk14-win_x64"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.version" value="14"/>
+    <property name="java.vendor" value="Azul Systems, Inc."/>
+    <property name="maven.home" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2019.3.4\plugins\maven\lib\maven3"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.version.date" value="2020-03-17"/>
+    <property name="java.vendor.url.bug" value="http://www.azulsystems.com/support/"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="java.vendor.version" value="Zulu14.27+1-CA"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase classname="com.curiosity.apis.CuriosityWebsiteTest" name="testWebsite" time="8.031"/>
+  <testcase classname="com.curiosity.apis.CuriosityWebsiteTest" name="testWebsite2" time="11.42">
+    <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#username\-56&quot;}
+  (Session info: chrome=81.0.4044.92)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;WKS42460&apos;, ip: &apos;192.168.0.18&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.92, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\TEMPMA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:52922}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 6a859e4043425dcb38dc16da4bb067fa
+*** Element info: {Using=id, value=username-56}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#username\-56&quot;}
+  (Session info: chrome=81.0.4044.92)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;WKS42460&apos;, ip: &apos;192.168.0.18&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.92, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\TEMPMA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:52922}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 6a859e4043425dcb38dc16da4bb067fa
+*** Element info: {Using=id, value=username-56}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at com.curiosity.apis.Website.findElement(Website.java:86)
+	at com.curiosity.apis.Website.setFieldValue(Website.java:131)
+	at com.curiosity.apis.Website.login(Website.java:178)
+	at com.curiosity.apis.CuriosityWebsiteTest.testWebsite2(CuriosityWebsiteTest.java:36)
+</failure>
+    <system-out>Url after loading Home Page: https://curiositydrivenadventure.com/
+Title of the Home Page: Curiosity driven Adventure � Tiny Improvements everyday!
+</system-out>
+  </testcase>
+  <testcase classname="com.curiosity.apis.IkeaWebsiteTest" name="testWebsite" time="4.806"/>
+  <testcase classname="com.curiosity.apis.TestKakaoDummy" name="testWebsite" time="13.61">
+    <failure message="timeout: Timed out receiving message from renderer: -0.001
+  (Session info: chrome=81.0.4044.92)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;WKS42460&apos;, ip: &apos;192.168.0.18&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.92, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\TEMPMA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:53116}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 9aea82ad13b08097c78a98a81c92642d" type="org.openqa.selenium.TimeoutException">org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: -0.001
+  (Session info: chrome=81.0.4044.92)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;WKS42460&apos;, ip: &apos;192.168.0.18&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;14&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.92, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\TEMPMA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:53116}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 9aea82ad13b08097c78a98a81c92642d
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
+	at com.curiosity.apis.Website.loadUrl(Website.java:49)
+	at com.curiosity.apis.KakaoDummy.login(KakaoDummy.java:28)
+	at com.curiosity.apis.TestKakaoDummy.testWebsite(TestKakaoDummy.java:22)
+</failure>
+    <system-out>Url after loading Home Page: https://curiositydrivenadventure.com/
+Title of the Home Page: Curiosity driven Adventure � Tiny Improvements everyday!
+</system-out>
+    <system-err>Starting ChromeDriver 80.0.3987.106 (f68069574609230cf9b635cd784cfb1bf81bb53a-refs/branch-heads/3987@{#882}) on port 35684
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+[1586894133.236][WARNING]: This version of ChromeDriver has not been tested with Chrome version 81.
+[1586894135.300][WARNING]: Timed out connecting to Chrome, retrying...
+Apr 14, 2020 9:55:37 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+[1586894139.350][WARNING]: Timed out connecting to Chrome, retrying...
+[1586894143.342][SEVERE]: Timed out receiving message from renderer: 0.100
+[1586894143.444][SEVERE]: Timed out receiving message from renderer: 0.100
+[1586894143.546][SEVERE]: Timed out receiving message from renderer: 0.100
+[1586894143.648][SEVERE]: Timed out receiving message from renderer: 0.100
+[1586894143.749][SEVERE]: Timed out receiving message from renderer: 0.100
+[1586894143.850][SEVERE]: Timed out receiving message from renderer: 0.100
+[1586894143.952][SEVERE]: Timed out receiving message from renderer: 0.100
+[1586894144.053][SEVERE]: Timed out receiving message from renderer: 0.100
+[1586894144.154][SEVERE]: Timed out receiving message from renderer: 0.100
+[1586894144.255][SEVERE]: Timed out receiving message from renderer: 0.100
+[1586894144.563][SEVERE]: Timed out receiving message from renderer: 0.100
+[1586894144.666][SEVERE]: Timed out receiving message from renderer: 0.100
+[1586894144.904][SEVERE]: Timed out receiving message from renderer: 0.100
+[1586894150.070][SEVERE]: Timed out receiving message from renderer: 0.100
+[1586894150.171][SEVERE]: Timed out receiving message from renderer: 0.100
+[1586894150.272][SEVERE]: Timed out receiving message from renderer: 0.100
+[1586894150.408][SEVERE]: Timed out receiving message from renderer: 0.100
+[1586894150.510][SEVERE]: Timed out receiving message from renderer: 0.100
+[1586894150.612][SEVERE]: Timed out receiving message from renderer: 0.100
+[1586894150.714][SEVERE]: Timed out receiving message from renderer: 0.100
+[1586894150.815][SEVERE]: Timed out receiving message from renderer: 0.100
+[1586894150.953][SEVERE]: Timed out receiving message from renderer: 0.100
+[1586894151.054][SEVERE]: Timed out receiving message from renderer: 0.100
+[1586894151.155][SEVERE]: Timed out receiving message from renderer: 0.100
+[1586894151.394][SEVERE]: Timed out receiving message from renderer: 0.100
+[1586894151.495][SEVERE]: Timed out receiving message from renderer: 0.100
+[1586894151.597][SEVERE]: Timed out receiving message from renderer: 0.100
+[1586894151.699][SEVERE]: Timed out receiving message from renderer: 0.100
+[1586894151.800][SEVERE]: Timed out receiving message from renderer: 0.100
+[1586894151.901][SEVERE]: Timed out receiving message from renderer: 0.100
+[1586894152.002][SEVERE]: Timed out receiving message from renderer: 0.100
+[1586894152.103][SEVERE]: Timed out receiving message from renderer: 0.100
+[1586894152.204][SEVERE]: Timed out receiving message from renderer: 0.100
+[1586894152.306][SEVERE]: Timed out receiving message from renderer: 0.100
+[1586894152.409][SEVERE]: Timed out receiving message from renderer: 0.100
+[1586894152.510][SEVERE]: Timed out receiving message from renderer: 0.100
+[1586894152.611][SEVERE]: Timed out receiving message from renderer: 0.100
+[1586894152.712][SEVERE]: Timed out receiving message from renderer: 0.100
+[1586894152.815][SEVERE]: Timed out receiving message from renderer: 0.100
+[1586894152.916][SEVERE]: Timed out receiving message from renderer: 0.100
+[1586894153.032][SEVERE]: Timed out receiving message from renderer: 0.100
+[1586894153.133][SEVERE]: Timed out receiving message from renderer: 0.100
+[1586894153.234][SEVERE]: Timed out receiving message from renderer: 0.100
+[1586894153.489][SEVERE]: Timed out receiving message from renderer: 0.100
+[1586894153.591][SEVERE]: Timed out receiving message from renderer: 0.100
+[1586894153.692][SEVERE]: Timed out receiving message from renderer: 0.100
+[1586894153.793][SEVERE]: Timed out receiving message from renderer: 0.100
+[1586894153.895][SEVERE]: Timed out receiving message from renderer: 0.100
+[1586894153.996][SEVERE]: Timed out receiving message from renderer: 0.100
+[1586894154.098][SEVERE]: Timed out receiving message from renderer: 0.100
+[1586894154.199][SEVERE]: Timed out receiving message from renderer: 0.100
+[1586894154.300][SEVERE]: Timed out receiving message from renderer: 0.100
+[1586894154.402][SEVERE]: Timed out receiving message from renderer: 0.100
+[1586894154.503][SEVERE]: Timed out receiving message from renderer: 0.100
+[1586894154.604][SEVERE]: Timed out receiving message from renderer: 0.100
+[1586894154.706][SEVERE]: Timed out receiving message from renderer: 0.100
+[1586894154.807][SEVERE]: Timed out receiving message from renderer: 0.100
+[1586894154.909][SEVERE]: Timed out receiving message from renderer: 0.100
+[1586894155.010][SEVERE]: Timed out receiving message from renderer: 0.100
+[1586894155.075][SEVERE]: Timed out receiving message from renderer: 0.063
+[1586894155.076][SEVERE]: Timed out receiving message from renderer: -0.001
+</system-err>
+  </testcase>
+</testsuite>

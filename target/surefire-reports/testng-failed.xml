@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Command line suite]" verbose="0">
+  <test name="Command line test(failed)">
+    <classes>
+      <class name="com.curiosity.apis.CuriosityWebsiteTest">
+        <methods>
+          <include name="testWebsite2"/>
+          <include name="initiate"/>
+          <include name="cleanup"/>
+        </methods>
+      </class> <!-- com.curiosity.apis.CuriosityWebsiteTest -->
+      <class name="com.curiosity.apis.TestKakaoDummy">
+        <methods>
+          <include name="initiate"/>
+          <include name="cleanup"/>
+          <include name="testWebsite"/>
+        </methods>
+      </class> <!-- com.curiosity.apis.TestKakaoDummy -->
+      <class name="com.curiosity.apis.IkeaWebsiteTest">
+        <methods>
+          <include name="initiate"/>
+          <include name="cleanup"/>
+        </methods>
+      </class> <!-- com.curiosity.apis.IkeaWebsiteTest -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [Command line suite] -->
