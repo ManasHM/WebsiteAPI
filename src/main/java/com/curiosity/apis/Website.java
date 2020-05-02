@@ -5,6 +5,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -27,10 +28,12 @@ public class Website {
         }
         String browserName = GlobalData.getBrowserName();
         if ("Chrome".equals(browserName)) {
+            System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY,"true");
             System.setProperty("webdriver.chrome.driver", GlobalData.getWDLocation());
            // DesiredCapabilities capabilities = DesiredCapabilities.chrome();
          //   capabilities.setCapability(CapabilityType.PAGE_LOAD_STRATEGY, "none");
             driver = new ChromeDriver();
+            
         } else if ("Firefox".equals(browserName)) {
             System.setProperty("webdriver.gecko.driver", GlobalData.getWDLocation());
             driver = new FirefoxDriver();
@@ -130,8 +133,14 @@ public class Website {
     }
 
     public boolean navigateToLink(String type, String attribute) {
-        WebElement link = findElement(type, attribute);
-        link.click();
+        try {
+            WebElement link = findElement(type, attribute);
+            link.click();
+        } catch (IllegalStateException e) {
+            WebElement link = findElement(type, attribute);
+            JavascriptExecutor executor = (JavascriptExecutor) driver;
+            executor.executeScript("arguments[0].click();", link);
+        }
         return true;
     }
 
@@ -224,5 +233,11 @@ public class Website {
         setFieldValue(GlobalData.TYPE_ID, passwordFieldid, password);
         buttonClick(GlobalData.TYPE_ID, submitButtonid);
         return readCurrentUrl();
+    }
+
+    public void  scrolldown(){
+        JavascriptExecutor executor = (JavascriptExecutor) driver;
+        // This  will scroll down the page by  1000 pixel vertical
+        executor.executeScript("window.scrollBy(0,1000)");
     }
 }
