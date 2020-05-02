@@ -27,8 +27,8 @@ public class DemoTestPrior {
         demoSite.setFieldValue(GlobalData.TYPE_ID,CuriosityData.passwordFieldid,CuriosityData.password);
 
         demoSite.waitFor(3000);
-        demoSite.buttonClick(GlobalData.TYPE_ID,CuriosityData.submitButtonid);
-        demoSite.waitFor(3000);
+        demoSite.buttonClick(GlobalData.TYPE_ID, CuriosityData.submitButtonid);
+        demoSite.waitFor(5000);
 
     }
 
