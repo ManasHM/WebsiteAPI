@@ -238,6 +238,6 @@ public class Website {
     public void  scrolldown(){
         JavascriptExecutor executor = (JavascriptExecutor) driver;
         // This  will scroll down the page by  1000 pixel vertical
-        executor.executeScript("window.scrollBy(0,1000)");
+        executor.executeScript("window.scrollBy(0,700)");
     }
 }
